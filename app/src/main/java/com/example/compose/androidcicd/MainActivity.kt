@@ -17,4 +17,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    private fun checkEmpty(): Boolean {
+        return true
+    }
 }
