@@ -13,5 +13,11 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-      - name: Run sample script
-        uses: echo Hello, world
+      - name: Run tests
+        uses: ./gradlew test
+
+      - name: Upload test report
+        uses: actions.upload-artifact@v2
+        with:
+          name: unit_test_report
+          path: app/build/reports/test/testDebugUnitTest/
